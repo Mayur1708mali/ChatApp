@@ -94,7 +94,7 @@ export default function Home() {
 	};
 
 	return (
-		<main className='h-[100vh] max-w-2xl mx-auto py-5 px-5'>
+		<main className='h-[100vh] min-w-min max-w-2xl mx-auto py-5 px-5'>
 			<Header />
 			<div className=' h-full p-8 bg-secondary rounded-md flex flex-col justify-start'>
 				<form
