@@ -43,8 +43,6 @@ export default function RegisterPage() {
 	});
 
 	function handleSubmit(values: z.infer<typeof formSchema>) {
-		console.log(values);
-
 		if (values.password1 !== values.password2) {
 			alert('Password does not match!');
 			return;

@@ -40,8 +40,6 @@ export const AuthProvider = ({ children }: PropsWithChildren) => {
 	};
 
 	const handleUserLogin = async (credentials: Credentials) => {
-		console.log(credentials);
-
 		try {
 			await account.createEmailSession(
 				credentials.email,

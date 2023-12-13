@@ -36,8 +36,6 @@ export default function LoginPage() {
 	});
 
 	function handleSubmit(values: z.infer<typeof formSchema>) {
-		console.log(values);
-
 		handleUserLogin(values);
 	}
 

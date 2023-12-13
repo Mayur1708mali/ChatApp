@@ -59,7 +59,7 @@ export default function Home() {
 		const res = await database.listDocuments(databaseId, collectionId, [
 			Query.orderDesc('$createdAt'),
 		]);
-		console.log(res);
+
 		setMessages(res.documents);
 	}
 
