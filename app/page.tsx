@@ -116,7 +116,15 @@ export default function Home() {
 				<ScrollArea>
 					<div className='flex flex-col gap-5'>
 						{messages.map((msg) => (
-							<div key={msg.$id}>
+							<div
+								className={`${
+									!msg.$permissions.includes(
+										`delete(\"user:${user?.$id}\")`
+									)
+										? 'flex flex-col items-end justify-end'
+										: null
+								}`}
+								key={msg.$id}>
 								<div className='flex justify-between pr-3'>
 									<p className='flex gap-2 items-center'>
 										<div className='text-primary'>
@@ -144,7 +152,15 @@ export default function Home() {
 										/>
 									) : null}
 								</div>
-								<Badge className='h-10 text-base rounded-2xl'>
+								<Badge
+									variant={`${
+										msg.$permissions.includes(
+											`delete(\"user:${user?.$id}\")`
+										)
+											? 'outline'
+											: 'default'
+									}`}
+									className='h-10 text-base border-2 border-primary rounded-2xl'>
 									{msg.message}
 								</Badge>
 							</div>
