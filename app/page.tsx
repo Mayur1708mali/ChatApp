@@ -113,7 +113,7 @@ export default function Home() {
 						<Button type='submit'>Submit</Button>
 					</div>
 				</form>
-				<ScrollArea>
+				<ScrollArea className='pr-2'>
 					<div className='flex flex-col gap-5'>
 						{messages.map((msg) => (
 							<div
